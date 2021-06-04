@@ -1,0 +1,365 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    overflow: scroll;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article */
+article > * + * {
+    margin-top: 1em;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+input::-ms-clear {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        -webkit-animation-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+                animation-iteration-count: 1 !important;
+        -webkit-transition-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    color: #000;
+    font-family: "Inter", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #fff;
+    overflow: visible;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #161616;
+}
+
+.open-page {
+    color: #38a648;
+}
+
+.wrapper {
+    position: relative;
+    margin-left: 250px;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.aside {
+    width: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 35px 20px;
+    background-color: #16181d;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.aside__header {
+    text-align: center;
+}
+.aside__logo {
+    margin-bottom: 20px;
+}
+.aside__logo-image {
+    max-width: 100%;
+    width: 150px;
+    margin: 0;
+}
+.aside__content-item {
+    font-size: 18px;
+}
+.aside__content-item:hover {
+    color: #38a648;
+}
+.aside__content-item:nth-child(n+2) {
+    margin-top: 25px;
+}
+.aside__footer-content {
+    font-size: 10px;
+}
+
+.week {
+    padding: 35px 25px;
+}
+.week__title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+.week__day-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.week__day-time-list, .week__day-progressbar-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.week__day-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.week__day-time-list {
+    min-height: 35px;
+}
+.week__day-time-item:nth-child(odd) {
+    margin-top: auto;
+}
+.week__day {
+    text-align: center;
+    border-right: 1px solid #ddd;
+    width: calc(100% / 5);
+    padding: 0 35px;
+}
+.week__day:last-child {
+    border: 0;
+}
+.week__day-progressbar {
+    margin-top: 20px;
+}
+.week__day-title {
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.week__day-progressbar-item {
+    border: 1px solid #000;
+    width: 20px;
+    height: 100px;
+    position: relative;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #38a648), color-stop(70%, #fff));
+    background: linear-gradient(to top, #38a648 70%, #fff 70%);
+}
+.week__day-progressbar-item:nth-child(n+2) {
+    margin-left: 25px;
+}
+
+.success-rate {
+    margin-top: 25px;
+}
+.success-rate__line-board {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 20px;
+}
+.success-rate__line {
+    background: -webkit-gradient(linear, right top, left top, color-stop(80%, #f33827), color-stop(97%, #fff));
+    background: linear-gradient(to left, #f33827 80%, #fff 97%);
+    width: 70%;
+    margin-right: 10px;
+    border-radius: 0 5px 5px 0;
+}
+.success-rate__counter {
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.success-rate__title {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.task {
+    margin-top: 55px;
+}
+.task tr,
+.task td,
+.task th {
+    text-align: center;
+    vertical-align: center;
+    padding: 15px 35px;
+}
+.task th {
+    background-color: #38a648;
+    font-size: 16px;
+    color: #fff;
+}
+.task th:first-child {
+    border-radius: 15px 0 0 0;
+}
+.task th:last-child {
+    border-radius: 0 15px 0 0;
+}
+.task__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.summary {
+    padding: 35px 25px;
+}
+.summary__title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+.summary__item-progress {
+    width: 200px;
+    height: 100px;
+}
